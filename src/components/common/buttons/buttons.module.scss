@@ -1,0 +1,35 @@
+.ctaBtn {
+  width: 150px;
+  height: 52px;
+
+  background-color: #fdaeae;
+  border: none;
+  border-radius: 10px;
+
+  font-family: "Barlow";
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submitBtn {
+  width: 100px;
+  height: 35px;
+  margin: 5px 0;
+
+  background-color: #fdaeae;
+  border: none;
+  border-radius: 3px;
+
+  font-family: "Barlow";
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ctaBtn:hover,
+.submitBtn:hover {
+  background-color: #ff7979;
+}

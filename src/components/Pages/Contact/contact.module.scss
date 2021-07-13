@@ -1,0 +1,86 @@
+$headings: "Work Sans";
+$body: "Barlow";
+
+.contactWrapper {
+  margin: 0 24px;
+
+  h1 {
+    font-family: $headings;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-family: $headings;
+    margin: 5px 0;
+  }
+}
+
+p {
+  font-family: "Barlow";
+  color: rgba(#000, 0.7);
+}
+
+.form {
+  width: 100%;
+  background-color: rgba(#000, 0.1);
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    label {
+      font-family: $body;
+      color: rgba(#000, 0.7);
+      margin-bottom: 2px;
+    }
+
+    input,
+    textarea {
+      width: 300px;
+      border: 1px solid #000;
+      border-radius: 3px;
+
+      font-family: $body;
+    }
+
+    input {
+      text-indent: 5px;
+      height: 30px;
+    }
+
+    textarea {
+      resize: vertical;
+      padding: 5px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+    }
+  }
+}
+
+.socialContact {
+  margin-bottom: 30px;
+
+  ul {
+    margin: 10px 0;
+
+    li {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-left: 5px;
+        text-decoration: none;
+        color: rgba(#000, 0.7);
+        font-family: $body;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+footer {
+  height: 300px;
+  background-color: #d6d6d6;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 24px;
+
+  h5 {
+    font-family: "Work Sans";
+    font-size: 18px;
+  }
+
+  li {
+    margin: 10px 0;
+
+    a {
+      font-family: "Barlow";
+      font-size: 15px;
+      font-weight: 300;
+
+      text-decoration: none;
+      color: rgba(#000000, 0.7);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  p {
+    font-family: "Barlow";
+    font-weight: 300;
+    font-size: 12px;
+
+    margin: 20px 0;
+  }
+}

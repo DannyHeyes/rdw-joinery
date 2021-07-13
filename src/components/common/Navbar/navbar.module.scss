@@ -1,0 +1,60 @@
+$body-text: "Barlow";
+$thin-weight: 300;
+
+nav {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  .navHeader {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 15px;
+
+    img {
+      width: 100px;
+    }
+
+    a {
+      font-family: $body-text;
+      font-size: 15px;
+
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  .navLinks {
+    height: 35px;
+
+    display: flex;
+    align-items: flex-end;
+
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 20px;
+
+        a {
+          font-family: $body-text;
+          font-size: 15px;
+
+          text-transform: uppercase;
+          text-decoration: none;
+          color: rgba(#000000, 0.4);
+        }
+
+        a:hover {
+          color: rgba(#000000, 0.8);
+        }
+      }
+    }
+  }
+}
