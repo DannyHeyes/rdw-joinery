@@ -10,7 +10,7 @@ $heading-weight: 800;
   h1 {
     font-family: $heading-text;
     font-weight: $heading-weight;
-    font-size: 40px;
+    font-size: 38px;
 
     margin: 20px 0;
   }
@@ -45,7 +45,6 @@ $heading-weight: 800;
   div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
   }
 }
