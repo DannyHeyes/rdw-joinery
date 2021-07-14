@@ -1,3 +1,19 @@
+// SCREEN SIZE DEFINITIONS
+// Small - Large Tablets
+$screen-sm-min: 650px;
+
+// Tablet devices
+@mixin tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
 .wrapper {
   margin: 30px 24px;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

@@ -1,5 +1,21 @@
+// SCREEN SIZE DEFINITIONS
+// Small - Large Tablets
+$screen-sm-min: 650px;
+
+// Tablet devices
+@mixin tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------------
+
+// Font Variables.
 $body-text: "Barlow";
 $thin-weight: 300;
+
+//-----------------------------------------------------------
 
 nav {
   height: 100px;
@@ -9,6 +25,11 @@ nav {
 
   padding: 0 24px;
 
+  // 650px window width
+  @include tablet {
+    height: 120px;
+  }
+
   .navHeader {
     height: 65px;
     display: flex;
@@ -16,6 +37,11 @@ nav {
     align-items: center;
 
     padding-top: 15px;
+
+    // 650px window width
+    @include tablet {
+      height: 85px;
+    }
 
     img {
       width: 100px;
@@ -41,6 +67,11 @@ nav {
 
       li {
         margin-right: 20px;
+
+        //650px window width
+        @include tablet {
+          margin-right: 30px;
+        }
 
         a {
           font-family: $body-text;
