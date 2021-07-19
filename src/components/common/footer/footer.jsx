@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { IconContext } from 'react-icons';
+import { GrMail } from 'react-icons/gr';
 import { FaFacebookSquare, FaWhatsappSquare } from 'react-icons/fa';
 
 import './footer.module.scss';
-import { IconContext } from 'react-icons';
-import { MdEmail } from 'react-icons/md';
 
 const Footer = () => {
     return ( 
@@ -44,9 +44,11 @@ const Footer = () => {
            </div> 
 
            <div>
-                <IconContext.Provider value={{ size: '18px', style: { margin: "3px"} }} >
-                    <MdEmail/>
+                <IconContext.Provider value={{ size: '24px', style: { margin: "3px"} }} >
+                    <GrMail/>
+                    <a href="https://www.facebook.com/rdwjoineryservice">
                     <FaFacebookSquare/>
+                    </a> 
                     <FaWhatsappSquare/>
                 </IconContext.Provider>
            </div>

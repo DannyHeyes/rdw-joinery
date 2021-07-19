@@ -15,5 +15,7 @@ $screen-sm-min: 650px;
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+
+    margin: 30px 40px;
   }
 }

@@ -3,9 +3,9 @@ import React from 'react';
 import { contactWrapper, form, formGroup, socialContact } from './contact.module.scss';
 import { SubmitButton } from './../../common/buttons/buttons';
 
-import { MdEmail } from 'react-icons/md';
-import {  FaFacebookSquare } from 'react-icons/fa';
-import { FaWhatsappSquare } from 'react-icons/fa';
+import {  FaFacebookSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
+import { GrMail } from 'react-icons/gr';
 
 
 const Contact = () => {
@@ -58,13 +58,19 @@ const Contact = () => {
                 </p>
                 <ul>
                 <li>
-                    <MdEmail/> <a href="mailto:rdwjoinery@gmail.com"> Send us an email</a>
+                    <IconContext.Provider value={{ size: "24px" }}>
+                        <GrMail/> <a href="mailto:rdwjoinery@gmail.com"> Send us an email</a>
+                    </IconContext.Provider>
                 </li>
                     <li>
-                        <FaFacebookSquare /> <a href="https://facebook.com/rdwjoinery"> Find us on Facebook</a>   
+                        <IconContext.Provider value={{ size: "24px" }}>
+                            <FaFacebookSquare /> <a href="https://www.facebook.com/rdwjoineryservice"> Find us on Facebook</a>  
+                        </IconContext.Provider> 
                     </li>
                     <li>
-                    <FaWhatsappSquare/> <a href="/"> Message us on Whatsapp</a>
+                        <IconContext.Provider value={{ size: "24px" }}>
+                            <FaWhatsappSquare/> <a href="/"> Message us on Whatsapp</a>
+                        </IconContext.Provider> 
                     </li>
                 </ul>
                 

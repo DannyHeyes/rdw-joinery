@@ -1,18 +1,47 @@
+// SCREEN SIZE DEFINITIONS
+// Tablets
+$screen-sm-min: 650px;
+
+// Tablet devices
+@mixin tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------------
+
 $headings: "Work Sans";
 $body: "Barlow";
 
+//-----------------------------------------------------------
+
 .contactWrapper {
   margin: 0 24px;
+
+  @include tablet {
+    margin: 0 40px;
+  }
 
   h1 {
     font-family: $headings;
     font-size: 28px;
     margin: 20px 0;
+
+    // Tablet Viewport
+    @include tablet {
+      font-size: 40px;
+    }
   }
 
   h2 {
     font-family: $headings;
     margin: 5px 0;
+
+    // Tablet Viewport
+    @include tablet {
+      font-size: 30px;
+    }
   }
 }
 
@@ -27,6 +56,10 @@ p {
   padding: 10px;
   border-radius: 3px;
   margin-bottom: 30px;
+
+  @include tablet {
+    padding: 20px;
+  }
 
   .formGroup {
     display: flex;
@@ -51,6 +84,11 @@ p {
     input {
       text-indent: 5px;
       height: 30px;
+
+      // Tablet Viewport
+      @include tablet {
+        height: 40px;
+      }
     }
 
     textarea {
@@ -68,6 +106,13 @@ p {
 .socialContact {
   margin-bottom: 30px;
 
+  p {
+    @include tablet {
+      width: 600px;
+      margin-top: 15px;
+    }
+  }
+
   ul {
     margin: 10px 0;
 
@@ -75,6 +120,11 @@ p {
       margin: 8px 0;
       display: flex;
       align-items: center;
+
+      // Tablet Viewport
+      @include tablet {
+        margin: 15px 0;
+      }
 
       a {
         margin-left: 5px;

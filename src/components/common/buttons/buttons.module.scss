@@ -1,3 +1,16 @@
+// SCREEN SIZE DEFINITIONS
+// Tablets
+$screen-sm-min: 650px;
+
+// Tablet devices
+@mixin tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------------
+
 .ctaBtn {
   width: 150px;
   height: 52px;
@@ -27,6 +40,12 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+
+  // Tablet Viewport
+  @include tablet {
+    width: 150px;
+    height: 40px;
+  }
 }
 
 .ctaBtn:hover,
