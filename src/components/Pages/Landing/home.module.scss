@@ -5,6 +5,14 @@ $screen-sm-min: 650px;
 // Small PC Devices
 $screen-sm-pc: 950px;
 
+// PC Devices
+$screen-md-pc: 1200px;
+
+// Large Devices
+$screen-lg-pc: 1440px;
+
+//-----------------------------------------------------------
+
 // Tablet devices
 @mixin tablet {
   @media (min-width: #{$screen-sm-min}) {
@@ -19,6 +27,20 @@ $screen-sm-pc: 950px;
   }
 }
 
+// PC Devices
+@mixin md-pc {
+  @media (min-width: #{$screen-md-pc}) {
+    @content;
+  }
+}
+
+// Large PC devices
+@mixin lg-pc {
+  @media (min-width: #{$screen-lg-pc}) {
+    @content;
+  }
+}
+
 //-----------------------------------------------------------
 
 // Font Variables.
@@ -29,9 +51,20 @@ $heading-weight: 800;
 .homeWrapper {
   margin: 20px 24px;
 
-  // Tablet Viewport
+  // 650px Breakpoint ---------------------------------------
   @include tablet {
     margin: 20px 40px;
+  }
+
+  // 950px Breakpoint ---------------------------------------
+  @include sm-pc {
+    margin: 20px 80px;
+  }
+
+  // 1440px Breakpoint --------------------------------------
+  @include lg-pc {
+    max-width: 1200px;
+    margin: 20px auto;
   }
 }
 
@@ -44,9 +77,14 @@ $heading-weight: 800;
 
     margin: 20px 0;
 
-    // 650px window width plus
+    // 650px Breakpoint -------------------------------------
     @include tablet {
       font-size: 50px;
+    }
+
+    // 950px Breakpoint -------------------------------------
+    @include sm-pc {
+      font-size: 65px;
     }
   }
 
@@ -59,12 +97,27 @@ $heading-weight: 800;
     background-size: cover;
 
     margin: 50px auto;
+
+    // 950px Breakpoint --------------------------------------
+    @include sm-pc {
+      height: 500px;
+    }
+
+    // 1200px Breakpoint -------------------------------------
+    @include md-pc {
+      height: 600px;
+    }
   }
 
   h2 {
     font-family: $heading-text;
     font-weight: $heading-weight;
     font-size: 32px;
+
+    // 1200px Breakpoint ------------------------------------
+    @include md-pc {
+      font-size: 40px;
+    }
   }
 }
 
@@ -77,11 +130,15 @@ $heading-weight: 800;
     margin-bottom: 30px;
   }
 
-  div {
+  .serviceCardDiv {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+
+    // 650px Breakpoint ------------------------------------
+    @include tablet {
+    }
   }
 }
 
@@ -96,10 +153,22 @@ $heading-weight: 800;
     margin: 30px auto;
     border-radius: 5px;
 
+    // 650px Breakpoint ------------------------------------
     @include tablet {
       position: absolute;
       top: 50px;
-      right: 5%;
+      left: 40%;
+    }
+
+    // 950px Breakpoint ------------------------------------
+    @include sm-pc {
+      left: 49%;
+    }
+
+    // 1440px Breakpoint ------------------------------------
+    @include lg-pc {
+      width: 400px;
+      height: 480px;
     }
   }
 
@@ -113,13 +182,28 @@ $heading-weight: 800;
     margin: 30px auto;
     border-radius: 5px;
 
+    // 650px Breakpoint ------------------------------------
     @include tablet {
       position: absolute;
       top: 200px;
-      left: 6%;
+      right: 40%;
+    }
+
+    // 950px Breakpoint ------------------------------------
+    @include sm-pc {
+      right: 46%;
+    }
+
+    // 1440px Breakpoint ------------------------------------
+    @include lg-pc {
+      width: 400px;
+      height: 500px;
+
+      background-position: top;
     }
   }
 
+  // 650px Breakpoint ------------------------------------
   @include tablet {
     height: 750px;
     position: relative;
@@ -141,5 +225,17 @@ $heading-weight: 800;
     text-align: center;
 
     margin-bottom: 30px;
+
+    // 650px Breakpoint ------------------------------------
+    @include tablet {
+      font-size: 28px;
+    }
+
+    // 1440px Breakpoint ------------------------------------
+    @include lg-pc {
+      font-size: 40px;
+
+      margin-top: 30px;
+    }
   }
 }

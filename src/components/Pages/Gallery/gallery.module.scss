@@ -2,6 +2,17 @@
 // Small - Large Tablets
 $screen-sm-min: 650px;
 
+// Small PC Devices
+$screen-sm-pc: 950px;
+
+// PC Devices
+$screen-md-pc: 1200px;
+
+// Large Devices
+$screen-lg-pc: 1440px;
+
+//-----------------------------------------------------------
+
 // Tablet devices
 @mixin tablet {
   @media (min-width: #{$screen-sm-min}) {
@@ -9,13 +20,55 @@ $screen-sm-min: 650px;
   }
 }
 
+// Small PC devices
+@mixin sm-pc {
+  @media (min-width: #{$screen-sm-pc}) {
+    @content;
+  }
+}
+
+// PC Devices
+@mixin md-pc {
+  @media (min-width: #{$screen-md-pc}) {
+    @content;
+  }
+}
+
+// Large PC devices
+@mixin lg-pc {
+  @media (min-width: #{$screen-lg-pc}) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------------
+
 .wrapper {
   margin: 30px 24px;
 
+  // 650px Breakpoint ---------------------------------------
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 
     margin: 30px 40px;
+  }
+
+  @include sm-pc {
+    margin: 30px 80px;
+  }
+
+  // 1200px Breakpoint -------------------------------------
+  @include md-pc {
+    max-width: 1050px;
+    margin: 30px auto;
+
+    justify-content: center;
+  }
+
+  // 1440px Breakpoint ------------------------------------
+  @include lg-pc {
+    margin: 30px auto;
   }
 }

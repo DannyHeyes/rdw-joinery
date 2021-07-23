@@ -5,6 +5,12 @@ $screen-sm-min: 650px;
 // Small PC Devices
 $screen-sm-pc: 950px;
 
+// PC Devices
+$screen-md-pc: 1200px;
+
+// Large Devices
+$screen-lg-pc: 1440px;
+
 // Tablet devices
 @mixin tablet {
   @media (min-width: #{$screen-sm-min}) {
@@ -15,6 +21,20 @@ $screen-sm-pc: 950px;
 // Small PC devices
 @mixin sm-pc {
   @media (min-width: #{$screen-sm-pc}) {
+    @content;
+  }
+}
+
+// PC Devices
+@mixin md-pc {
+  @media (min-width: #{$screen-md-pc}) {
+    @content;
+  }
+}
+
+// Large PC devices
+@mixin lg-pc {
+  @media (min-width: #{$screen-lg-pc}) {
     @content;
   }
 }
@@ -40,6 +60,17 @@ nav {
     height: 120px;
 
     padding: 0 40px;
+  }
+
+  // Small PC Viewport
+  @include sm-pc {
+    padding: 0 80px;
+  }
+
+  @include lg-pc {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .navHeader {
@@ -102,11 +133,6 @@ nav {
           text-transform: uppercase;
           text-decoration: none;
           color: rgba(#000000, 0.5);
-
-          // Small PC Viewport
-          @include sm-pc {
-            font-size: 18px;
-          }
         }
 
         a:hover {

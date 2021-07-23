@@ -2,9 +2,39 @@
 // Tablets
 $screen-sm-min: 650px;
 
+// Small PC Devices
+$screen-sm-pc: 950px;
+
+// PC Devices
+$screen-md-pc: 1200px;
+
+// Large Devices
+$screen-lg-pc: 1440px;
+
 // Tablet devices
 @mixin tablet {
   @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Small PC devices
+@mixin sm-pc {
+  @media (min-width: #{$screen-sm-pc}) {
+    @content;
+  }
+}
+
+// PC Devices
+@mixin md-pc {
+  @media (min-width: #{$screen-md-pc}) {
+    @content;
+  }
+}
+
+// Large PC devices
+@mixin lg-pc {
+  @media (min-width: #{$screen-lg-pc}) {
     @content;
   }
 }
@@ -19,8 +49,24 @@ $body: "Barlow";
 .contactWrapper {
   margin: 0 24px;
 
+  // Tablet Viewport
   @include tablet {
     margin: 0 40px;
+  }
+
+  // Small PC Viewport
+  @include sm-pc {
+    margin: 20px 80px;
+  }
+
+  // PC Devices
+  @include md-pc {
+    max-width: 1200px;
+  }
+
+  // Large PC
+  @include lg-pc {
+    margin: 20px auto;
   }
 
   h1 {
@@ -36,11 +82,12 @@ $body: "Barlow";
 
   h2 {
     font-family: $headings;
-    margin: 5px 0;
+    margin: 10px 0;
 
     // Tablet Viewport
     @include tablet {
       font-size: 30px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -48,89 +95,116 @@ $body: "Barlow";
 p {
   font-family: "Barlow";
   color: rgba(#000, 0.7);
+
+  max-width: 720px;
 }
 
-.form {
-  width: 100%;
-  background-color: rgba(#000, 0.1);
-  padding: 10px;
-  border-radius: 3px;
-  margin-bottom: 30px;
+.contentSection {
+  // PC Devices
+  @include md-pc {
+    display: grid;
+    grid-template-columns: 50% 50%;
 
-  @include tablet {
-    padding: 20px;
+    margin-top: 20px;
   }
 
-  .formGroup {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
+  .form {
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(#000, 0.1);
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 30px;
 
-    label {
-      font-family: $body;
-      color: rgba(#000, 0.7);
-      margin-bottom: 2px;
-    }
-
-    input,
-    textarea {
-      width: 95%;
-      border: 1px solid #000;
-      border-radius: 3px;
-
-      font-family: $body;
-    }
-
-    input {
-      text-indent: 5px;
-      height: 30px;
-
-      // Tablet Viewport
-      @include tablet {
-        height: 40px;
-      }
-    }
-
-    textarea {
-      resize: vertical;
-      padding: 5px;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-    }
-  }
-}
-
-.socialContact {
-  margin-bottom: 30px;
-
-  p {
     @include tablet {
-      width: 600px;
-      margin-top: 15px;
+      padding: 20px;
+    }
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+
+      label {
+        font-family: $body;
+        color: rgba(#000, 0.7);
+        margin-bottom: 2px;
+
+        @include tablet {
+          margin-bottom: 5px;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        max-width: 700px;
+        border: 1px solid #000;
+        border-radius: 3px;
+
+        font-family: $body;
+      }
+
+      input {
+        text-indent: 5px;
+        height: 30px;
+
+        // Tablet Viewport
+        @include tablet {
+          height: 40px;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        padding: 5px;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
     }
   }
 
-  ul {
-    margin: 10px 0;
+  .socialContact {
+    margin-bottom: 30px;
 
-    li {
-      margin: 8px 0;
-      display: flex;
-      align-items: center;
+    @include md-pc {
+      padding-left: 50px;
+    }
 
-      // Tablet Viewport
+    p {
       @include tablet {
-        margin: 15px 0;
+        width: 95%;
+        margin-top: 15px;
       }
 
-      a {
-        margin-left: 5px;
-        text-decoration: none;
-        color: rgba(#000, 0.7);
-        font-family: $body;
+      @include md-pc {
+        width: 90%;
+        margin-top: 40px;
+      }
+    }
+
+    ul {
+      margin: 10px 0;
+
+      li {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+
+        // Tablet Viewport
+        @include tablet {
+          margin: 15px 0;
+        }
+
+        a {
+          margin-left: 5px;
+          text-decoration: none;
+          color: rgba(#000, 0.7);
+          font-family: $body;
+        }
       }
     }
   }

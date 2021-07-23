@@ -1,9 +1,11 @@
 import React from 'react';
 import ServicesCard from '../../common/cards/cards';
+import { ScrollToTopOnMount } from '../../../App';
+import history from './../../../history';
 
 import { FaHammer } from 'react-icons/fa';
 
-import { homeWrapper, heroSection, heroImage, servicesSection, imageSection, imgOne, imgTwo, ctaSection } from './home.module.scss';
+import { homeWrapper, heroSection, heroImage, servicesSection,serviceCardDiv, imageSection, imgOne, imgTwo, ctaSection } from './home.module.scss';
 import CtaButton from '../../common/buttons/buttons';
 
 const services = ["loft boarding", "storage", "decking", "kitchens", "doors", "furniture", "sheds", "& much more!"]
@@ -12,6 +14,7 @@ const services = ["loft boarding", "storage", "decking", "kitchens", "doors", "f
 const Home = () => {
     return ( 
     <div className={homeWrapper}>
+    <ScrollToTopOnMount/>
 
       <section className={heroSection}>
           <h1>
@@ -30,7 +33,7 @@ const Home = () => {
            We offer the following services: 
         </h3>
 
-        <div>
+        <div className={serviceCardDiv}>
             {services.map((service, index) => (
                 <ServicesCard key={index}>
                     <FaHammer/>
@@ -56,8 +59,8 @@ const Home = () => {
             Get in touch today to arrange your quote
         </h4>
 
-        <form>
-          <CtaButton>
+        <form onClick={() => history.push('/contact')}>
+          <CtaButton >
             arrange a quote
           </CtaButton>
         </form>

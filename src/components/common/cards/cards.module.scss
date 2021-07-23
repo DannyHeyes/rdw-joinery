@@ -1,6 +1,53 @@
+// SCREEN SIZE DEFINITIONS
+// Small - Large Tablets
+$screen-sm-min: 650px;
+
+// Small PC Devices
+$screen-sm-pc: 950px;
+
+// PC Devices
+$screen-md-pc: 1200px;
+
+// Large Devices
+$screen-lg-pc: 1440px;
+
+//-----------------------------------------------------------
+
+// Tablet devices
+@mixin tablet {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Small PC devices
+@mixin sm-pc {
+  @media (min-width: #{$screen-sm-pc}) {
+    @content;
+  }
+}
+
+// PC Devices
+@mixin md-pc {
+  @media (min-width: #{$screen-md-pc}) {
+    @content;
+  }
+}
+
+// Large PC devices
+@mixin lg-pc {
+  @media (min-width: #{$screen-lg-pc}) {
+    @content;
+  }
+}
+
+//-----------------------------------------------------------
+
 $text: "Barlow";
 $weight: 300;
 $style: uppercase;
+
+//-----------------------------------------------------------
 
 .servicesCard {
   width: 128px;
@@ -13,18 +60,36 @@ $style: uppercase;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  // 950px Breakpoint ---------------------------------------
+  @include sm-pc {
+    width: 150px;
+  }
+
+  // 1200px Breakpoint ---------------------------------------
+  @include md-pc {
+    width: 200px;
+    height: 120px;
+  }
 }
 
 .servicesCard p {
   font-family: $text;
   font-weight: $weight;
   text-transform: $style;
+
+  // 950px Breakpoint ---------------------------------------
+  @include sm-pc {
+    font-size: 18px;
+    margin: 10px 0;
+  }
 }
 
 // Image Cards
 
 .imageCards {
-  width: 335px;
+  width: 100%;
+  max-width: 330px;
   height: 400px;
 
   margin: 10px auto;
