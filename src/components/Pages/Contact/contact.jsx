@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { contactWrapper, contentSection, form, formGroup, socialContact } from './contact.module.scss';
-import { SubmitButton } from './../../common/buttons/buttons';
+import { contactWrapper, contentSection, socialContact } from './contact.module.scss';
+
 import { ScrollToTopOnMount } from '../../../App';
 
 import {  FaFacebookSquare, FaWhatsappSquare } from 'react-icons/fa';
