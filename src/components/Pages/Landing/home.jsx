@@ -5,8 +5,9 @@ import history from './../../../history';
 
 import { FaHammer } from 'react-icons/fa';
 
-import { homeWrapper, heroSection, heroImage, servicesSection,serviceCardDiv, imageSection, imgOne, imgTwo, ctaSection } from './home.module.scss';
+import { homeWrapper, heroSection, heroImage, servicesSection,serviceCardDiv, imageSection, imgOne, imgTwo, ctaSection, reviewsSection, reviewWrapper, topDiv } from './home.module.scss';
 import CtaButton from '../../common/buttons/buttons';
+import { ReviewCard } from './../../common/cards/cards';
 
 const services = ["loft boarding", "storage", "decking", "kitchens", "doors", "furniture", "sheds", "& much more!"]
 
@@ -65,6 +66,68 @@ const Home = () => {
           </CtaButton>
         </form>
         
+      </section>
+
+      <section className={reviewsSection}>
+
+              <h4>
+                See what our customers have to say about our work:
+              </h4>
+
+              <div className={reviewWrapper}>
+
+                <ReviewCard>
+                  <div className={topDiv}>
+                    <h5>
+                      Really good work, very flexible when weather was a problem. Lovely guy who I wouldn't hesitate to recommend
+                    </h5>
+                  </div>
+                
+                  <p>
+                    Michelle Cox
+                  </p>
+                </ReviewCard>
+
+                <ReviewCard>
+                  <div className={topDiv}>
+                    <h5>
+                      Highly recommended RDW joinery have worked on our house on multiple occasions and each time I've been more than happy with the end result.
+                    </h5>
+                    
+                  </div>
+
+                  <p>
+                    Barbara Hill
+                  </p>
+                </ReviewCard>
+
+                <ReviewCard>
+                  <div className={topDiv}>
+                    <h5>
+                      Superb service. Excellent value for money and very impressed with the final outcome.  
+                      Contact details forwarded to friends and family already 
+                    </h5>
+                  </div>
+
+                  <p>
+                    David Johnston
+                  </p>
+                </ReviewCard>
+
+                <ReviewCard>
+                  <div className={topDiv}>
+                    <h5>
+                      The guys came today and did an amazing job at boarding the loft. Very professional and cleaned up after themselves.
+                    </h5>
+                  </div>
+                  <p>
+                    Jay Clark
+                  </p>
+                </ReviewCard>
+                
+              </div>
+
+              
       </section>
           
       

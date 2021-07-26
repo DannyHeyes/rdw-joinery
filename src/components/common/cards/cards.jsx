@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { servicesCard, imageCards } from './cards.module.scss';
+import { servicesCard, imageCards, reviewCard } from './cards.module.scss';
 
 const ServicesCard = (props) => {
     return ( 
@@ -19,4 +19,12 @@ export const ImageCard = (props) => {
         </div>
 
      );
+}
+
+export const ReviewCard = (props) => {
+    return (
+        <div className={reviewCard}>
+            {props.children}
+        </div>
+    );
 }

@@ -103,3 +103,33 @@ $style: uppercase;
 
   object-fit: cover;
 }
+
+// Review Cards
+
+.reviewCard {
+  width: 100%;
+  max-width: 350px;
+  min-height: 200px;
+  padding: 20px;
+
+  border: 2px solid #fdaeae;
+
+  display: grid;
+  grid-template-rows: 87% 13%;
+}
+
+.reviewCard hr {
+  border: none;
+  border-top: 1px solid rgba(#000, 0.3);
+  margin-top: 20px;
+}
+
+.reviewCard h5 {
+  font-family: $text;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.reviewCard p {
+  font-size: 15px;
+}

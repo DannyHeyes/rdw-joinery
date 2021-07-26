@@ -239,3 +239,34 @@ $heading-weight: 800;
     }
   }
 }
+
+.reviewsSection {
+  margin: 30px auto;
+
+  .reviewWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h4 {
+    font-family: $heading-text;
+    font-size: 24px;
+    margin: 20px auto;
+    max-width: 800px;
+
+    // 950px Breakpoint ------------------------------------
+    @include sm-pc {
+      padding-left: 30px;
+    }
+  }
+
+  .topDiv {
+    border-bottom: 1px solid rgba(#000000, 0.5);
+    margin-bottom: 10px;
+  }
+}
