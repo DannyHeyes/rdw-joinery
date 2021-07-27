@@ -109,7 +109,7 @@ $style: uppercase;
 .reviewCard {
   width: 100%;
   max-width: 350px;
-  min-height: 200px;
+  min-height: 220px;
   padding: 20px;
 
   border: 2px solid #fdaeae;
@@ -128,6 +128,10 @@ $style: uppercase;
   font-family: $text;
   font-weight: 400;
   font-size: 18px;
+}
+
+.reviewCard span {
+  font-size: 50px;
 }
 
 .reviewCard p {

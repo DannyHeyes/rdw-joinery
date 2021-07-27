@@ -8,6 +8,8 @@ import { FaHammer } from 'react-icons/fa';
 import { homeWrapper, heroSection, heroImage, servicesSection,serviceCardDiv, imageSection, imgOne, imgTwo, ctaSection, reviewsSection, reviewWrapper, topDiv } from './home.module.scss';
 import CtaButton from '../../common/buttons/buttons';
 import { ReviewCard } from './../../common/cards/cards';
+import { IconContext } from 'react-icons';
+import {GoQuote} from 'react-icons/go';
 
 const services = ["loft boarding", "storage", "decking", "kitchens", "doors", "furniture", "sheds", "& much more!"]
 
@@ -78,6 +80,9 @@ const Home = () => {
 
                 <ReviewCard>
                   <div className={topDiv}>
+                  <IconContext.Provider value={{ size: "25px", color: "grey" }}>
+                    <GoQuote/>
+                  </IconContext.Provider>
                     <h5>
                       Really good work, very flexible when weather was a problem. Lovely guy who I wouldn't hesitate to recommend
                     </h5>
@@ -90,6 +95,9 @@ const Home = () => {
 
                 <ReviewCard>
                   <div className={topDiv}>
+                  <IconContext.Provider value={{ size: "25px", color: "grey" }}>
+                    <GoQuote/>
+                  </IconContext.Provider>
                     <h5>
                       Highly recommended RDW joinery have worked on our house on multiple occasions and each time I've been more than happy with the end result.
                     </h5>
@@ -103,10 +111,14 @@ const Home = () => {
 
                 <ReviewCard>
                   <div className={topDiv}>
+                  <IconContext.Provider value={{ size: "25px", color: "grey" }}>
+                    <GoQuote/>
+                  </IconContext.Provider>
                     <h5>
                       Superb service. Excellent value for money and very impressed with the final outcome.  
                       Contact details forwarded to friends and family already 
                     </h5>
+                    
                   </div>
 
                   <p>
@@ -116,6 +128,9 @@ const Home = () => {
 
                 <ReviewCard>
                   <div className={topDiv}>
+                  <IconContext.Provider value={{ size: "25px", color: "grey" }}>
+                    <GoQuote/>
+                  </IconContext.Provider>
                     <h5>
                       The guys came today and did an amazing job at boarding the loft. Very professional and cleaned up after themselves.
                     </h5>
@@ -124,7 +139,7 @@ const Home = () => {
                     Jay Clark
                   </p>
                 </ReviewCard>
-                
+
               </div>
 
               
